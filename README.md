@@ -10,3 +10,25 @@ Pokédex construido con React. Muestra una lista de Pokémon en cards. La aplica
 - **Paginación**: Permite cargar más Pokémon con un botón "Load More".
 - **Interactividad**: Las tarjetas de Pokémon tienen un efecto de hover.
 - **Diseño Responsive**: La aplicación se adapta a diferentes tamaños de pantalla.
+
+## Tema personalizado en Tailwind (tailwind.config.js)
+
+
+```json
+
+module.exports = {
+  theme: {
+    extend: {
+      colors: {
+        pokemonRed: "#ffcb05",    // Color de fondo
+        pokemonBlue: "#003a70",   // Color de texto
+        pokemonYellow: "#fdb927", // Color de detalles
+        pokemonGreen: "#9bcc50",  // Alternativo para detalles o botones
+        pokemonGray: "#f1f1f1",   // Fondo claro para cards
+      },
+    },
+  },
+  variants: {},
+  plugins: [],
+};
+```
