@@ -5,7 +5,6 @@ import { getPokemonList } from "../api";
 export default function HomePage() {
   const [pokemons, setPokemons] = useState([]);
 
-  // Fetch initial data
   useEffect(() => {
     getPokemonList()
       .then((pokemonListResponse) => setPokemons(pokemonListResponse))
@@ -34,9 +33,7 @@ export default function HomePage() {
           ))}
         </section>
 
-        <div className="flex justify-center mt-4">
-          {/* Añade aquí tu botón o contenido adicional */}
-        </div>
+        <div className="flex justify-center mt-4"></div>
       </div>
     </main>
   );

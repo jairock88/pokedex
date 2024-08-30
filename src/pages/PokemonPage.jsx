@@ -2,10 +2,12 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { getPokemonByName } from "../api";
 import { typeColors } from "../components/typeColor";
+import { useNavigate } from "react-router-dom";
 
 export default function PokemonPage() {
   const [pokemon, setPokemon] = useState({});
   const { name } = useParams();
+  const navigate = useNavigate();
 
   useEffect(() => {
     getPokemonByName(name)
@@ -22,10 +24,8 @@ export default function PokemonPage() {
   }
 
   return (
-    <main className="flex items-center justify-center min-h-screen bg-gray-900 px-4">
-      {" "}
-      {/* Agregado padding horizontal */}
-      <div className="max-w-md w-full rounded-lg shadow-lg bg-gray-800 p-6 text-center hover:shadow-[0_0_45px_30px_rgba(255,235,0,0.4)]">
+    <main className="flex flex-col items-center justify-center min-h-screen bg-gray-900 px-4 space-y-4">
+      <div className="max-w-md w-full rounded-lg shadow-lg bg-gray-800 p-6 text-center hover:shadow-[0_0_75px_65px_rgba(255,235,0,0.4)]">
         <img
           src={pokemon.sprites?.other["official-artwork"]?.front_default}
           alt={name}
@@ -34,7 +34,7 @@ export default function PokemonPage() {
         <h1 className="text-xl font-semibold text-amber-400 mb-2 uppercase">
           {name}
         </h1>
-        <section className="text-gray-300 mb-4 ">
+        <section className="text-gray-300 mb-4">
           <span className="block">Height: {pokemon.height}m</span>
           <span className="block">Weight: {pokemon.weight}kg</span>
         </section>
@@ -50,6 +50,12 @@ export default function PokemonPage() {
           ))}
         </section>
       </div>
+      <button
+        onClick={() => navigate("/")}
+        className="rounded-lg text-md w-20 h-10 bg-gray-800 text-white hover:text-black hover:bg-amber-400 hover:animate-pulse"
+      >
+        Back
+      </button>
     </main>
   );
 }
