@@ -52,7 +52,7 @@ export default function PokemonPage() {
       </div>
       <button
         onClick={() => navigate("/")}
-        className="rounded-lg text-md w-20 h-10 bg-gray-800 text-white hover:text-black hover:bg-amber-400 hover:animate-pulse"
+        className="rounded-lg text-md w-20 h-8 shadow-lg bg-gray-800 text-white hover:text-black hover:bg-amber-400 hover:animate-pulse"
       >
         Back
       </button>

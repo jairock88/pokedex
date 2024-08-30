@@ -4,7 +4,7 @@ import { getPokemonByName } from "../api";
 import { useNavigate } from "react-router-dom";
 
 export default function Pokemon({ name }) {
-  const navigate = useNavigate(); // Hook de React Router
+  const navigate = useNavigate();
   const [pokemon, setPokemon] = useState({});
 
   useEffect(() => {
