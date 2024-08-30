@@ -11,7 +11,7 @@ export default function PokemonPage() {
     getPokemonByName(name)
       .then((pokemonResponse) => setPokemon(pokemonResponse))
       .catch((error) => console.error("[Get Pokemon By Name]: ", error));
-  }, []);
+  }, [name]);
 
   if (!pokemon.name) {
     return (
@@ -22,7 +22,9 @@ export default function PokemonPage() {
   }
 
   return (
-    <main className="flex items-center justify-center min-h-screen bg-gray-900">
+    <main className="flex items-center justify-center min-h-screen bg-gray-900 px-4">
+      {" "}
+      {/* Agregado padding horizontal */}
       <div className="max-w-md w-full rounded-lg shadow-lg bg-gray-800 p-6 text-center hover:shadow-[0_0_45px_30px_rgba(255,235,0,0.4)]">
         <img
           src={pokemon.sprites?.other["official-artwork"]?.front_default}
