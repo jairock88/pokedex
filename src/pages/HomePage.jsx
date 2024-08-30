@@ -12,7 +12,7 @@ export default function HomePage() {
   }, []);
 
   return (
-    <main className="min-h-screen bg-gray-900 flex items-center justify-center p-4">
+    <main className="font-sans min-h-screen bg-gray-900 flex items-center justify-center p-4">
       <div className="w-full max-w-6xl">
         <header>
           <h1 className="text-4xl font-bold text-amber-400 mb-4 text-center flex items-center justify-center p-5">

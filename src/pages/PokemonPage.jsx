@@ -24,7 +24,7 @@ export default function PokemonPage() {
   }
 
   return (
-    <main className="flex flex-col items-center justify-center min-h-screen bg-gray-900 px-4 space-y-4">
+    <main className="flex font-sans flex-col items-center justify-center min-h-screen bg-gray-900 px-4 space-y-4">
       <div className="max-w-md w-full rounded-lg shadow-lg bg-gray-800 p-6 text-center hover:shadow-[0_0_75px_65px_rgba(255,235,0,0.4)]">
         <img
           src={pokemon.sprites?.other["official-artwork"]?.front_default}

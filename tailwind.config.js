@@ -10,6 +10,9 @@ export default {
         pokemonGreen: "#9bcc50", // Alternativo para detalles o botones
         pokemonGray: "#f1f1f1", // Fondo claro para cards
       },
+      fontFamily: {
+        sans: ["Poppins", "sans-serif"], // Agrega la fuente 'Poppins'
+      },
     },
   },
   plugins: [],
